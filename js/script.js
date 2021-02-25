@@ -8,11 +8,17 @@ let image_ratio;
 let center_x;
 let center_y;
 
+// 線の長さの初期値
+let init_line_length;
+
 $(function(){
     
-    // 画像情報を計測
+    // 画像の初期情報を計測
     show_image_info();
     
+    // 線の長さの初期値を計測
+    init_line_length = $('p').width();
+
     // aタグをクリックした際のスムーズスクロール
     $('a').on('click', function() {
         
@@ -61,6 +67,22 @@ $(function(){
             // 別の方法
             // $('img').css({'width': width + 'px'});
             // $('img').offset({top: center_y - height / 2, left: center_x - width / 2});
+        } 
+    });
+    
+    // scroll 量に応じて、線を伸ばす
+    $(window).scroll(function(){
+        
+        // scroll量取得
+        let scroll_top = $(this).scrollTop();
+        
+        let line_length = init_line_length + scroll_top * 1.5;
+
+
+        // 拡大、縮小を行う範囲を規定
+        if(init_line_length < line_length && line_length <= $('#wrapper').width()){
+        
+            $('#main_view + p').css({'width': line_length + 'px'});
         } 
     });
 });

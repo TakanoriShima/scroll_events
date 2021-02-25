@@ -28,7 +28,7 @@ h2 {
 #main_view {
     width: 100%;
     overflow: hidden;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
 }
 img {
     width: 100%;
@@ -52,6 +52,16 @@ img {
     position: fixed;
     right: 293px;
     bottom: 25px;
+}
+
+/*スクロール量の応じて線を伸ばす*/
+#main_view + p {
+    border-bottom: solid 3px #00800059;
+    border-right: solid 10px #00800059;
+    margin-bottom: 35px;
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
 }
 
 /*media query*/
