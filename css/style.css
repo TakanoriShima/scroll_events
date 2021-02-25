@@ -1,5 +1,58 @@
 @charset "utf8";
+/*レイアウト調整*/
+#wrapper {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #eeeeee45;
+    padding: 30px;
+}
+h1 {
+    text-align: center;
+    color: red;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: double 3px red;
+    margin-bottom: 50px;
+}
+h2 {
+    text-align: center;
+    color: blue;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: double 3px blue;
+    margin-bottom: 200vh;
+}
 
+/*画像の拡大*/
+#main_view {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 8vh;
+}
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*スムーズスクロール*/
+#to_top {
+    position: fixed;
+    right: 45px;
+    bottom: 25px;  
+}
+#to_profile {
+    position: fixed;
+    right: 170px;
+    bottom: 25px;
+}
+
+#to_contact {
+    position: fixed;
+    right: 293px;
+    bottom: 25px;
+}
 
 /*media query*/
 /*ref)*/
